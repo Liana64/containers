@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 APP_DB="/app/instance/database.db"
 OUTPUT_FILE=/app/website/templates/output.html
 FULL_URL="${EXPOSED_PROTO,,}://${EXPOSED_URL}"
@@ -67,10 +66,11 @@ else
     # Create symbolic link
     create_symlink
 fi
-echo "Setting EXPOSED_URL to $ESCAPED_URL"
-sed -e "s|var url = \"https://LINK-TO-YOUR-DATABASE.COM/check_worker_eligibility\";.*|var url = \"$FULL_URL/check_worker_eligibility\"; // IMPORTANT: This is where you put the link to your database|g" "$OUTPUT_FILE"
+echo "Setting EXPOSED_URL"
+sed -i.bak -e "s|var url = \"https://LINK-TO-YOUR-DATABASE.COM/check_worker_eligibility\";.*|var url = \"$FULL_URL/check_worker_eligibility\"; // IMPORTANT: This is where you put the link to your database|g" "$OUTPUT_FILE"
 echo ""
-echo "Done! Webserver is ready for use"
+echo "Done! Webserver is ready for use and accessible at:"
+echo $FULL_URL
 echo "───────────────────────────────────────"
 
 exec \
