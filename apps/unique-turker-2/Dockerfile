@@ -1,4 +1,4 @@
-FROM docker.io/library/python:3.12-alpine
+FROM docker.io/library/python:3.13-alpine
 LABEL org.opencontainers.image.source="https://github.com/isaiasghezae/unique-turker-2"
 
 ARG TARGETPLATFORM
