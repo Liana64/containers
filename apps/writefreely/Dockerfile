@@ -35,7 +35,7 @@ RUN \
     rm -rf /tmp
 
 
-FROM alpine:3.18.4
+FROM alpine:3.21.0
 
 RUN apk update --no-cache && \
     apk upgrade --no-cache && \
