@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 channel=$1
 
 if [[ "${channel}" == "stable" ]]; then
