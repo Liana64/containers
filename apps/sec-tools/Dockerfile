@@ -8,7 +8,6 @@ ENV PYTHONUNBUFFERED=1 \
 RUN microdnf install -y dnf && \
     microdnf clean all
 
-
 RUN dnf install -y epel-release && \
     dnf config-manager --set-enabled crb && \
     dnf install -y dnf-plugins-core && \
@@ -90,11 +89,20 @@ RUN pip3 install --no-cache-dir \
     holehe \
     socialscan
 
-RUN git clone https://github.com/jasonxtn/Argus.git /opt/argus && \
-    cd /opt/argus && \
+RUN git clone https://github.com/jasonxtn/Argus.git /tmp/argus-install && \
+    cd /tmp/argus-install && \
+    mkdir -p /opt/argus && \
+    cp -r argus /opt/argus/ && \
     pip3 install --no-cache-dir -r requirements.txt && \
-    chmod +x argus.py && \
-    ln -s /opt/argus/argus.py /usr/local/bin/argus
+    if [ ! -f /opt/argus/argus/__main__.py ]; then \
+        echo 'from argus.cli.main import main' > /opt/argus/argus/__main__.py && \
+        echo 'if __name__ == "__main__":' >> /opt/argus/argus/__main__.py && \
+        echo '    main()' >> /opt/argus/argus/__main__.py; \
+    fi && \
+    echo '#!/bin/bash' > /usr/local/bin/argus && \
+    echo 'PYTHONPATH=/opt/argus python3 -m argus "$@"' >> /usr/local/bin/argus && \
+    chmod +x /usr/local/bin/argus && \
+    cd / && rm -rf /tmp/argus-install
 
 RUN sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions && \
