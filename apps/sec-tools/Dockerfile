@@ -25,8 +25,8 @@ RUN dnf install -y \
     nmap \
     nmap-ncat \
     socat \
-    python3 \
-    python3-pip \
+    python3.11 \
+    python3.11-pip \
     gcc \
     gcc-c++ \
     make \
@@ -37,6 +37,9 @@ RUN dnf install -y \
     tar \
     gzip \
     && dnf clean all
+
+RUN alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1 && \
+    alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3.11 1
 
 RUN wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz && \
     tar -xzf ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz && \
@@ -130,6 +133,7 @@ RUN echo '' >> /root/.zshrc && \
     echo 'HISTSIZE=10000' >> /root/.zshrc && \
     echo 'SAVEHIST=10000' >> /root/.zshrc && \
     echo 'setopt HIST_IGNORE_ALL_DUPS' >> /root/.zshrc && \
+    echo 'set EDITOR vim' >> /root/.zshrc && \
     echo 'setopt HIST_FIND_NO_DUPS' >> /root/.zshrc && \
     echo '' >> /root/.zshrc && \
     echo '[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh' >> /root/.zshrc
@@ -181,6 +185,7 @@ RUN echo '# Enable mouse support' > /root/.tmux.conf && \
 COPY ./apps/sec-tools/motd.txt /etc/motd
 COPY ./apps/sec-tools/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+RUN sed -i 's|root:/bin/bash|root:/bin/zsh|g' /etc/passwd
 WORKDIR /data
 SHELL ["/bin/zsh", "-c"]
 ENTRYPOINT ["/entrypoint.sh"]
