@@ -179,6 +179,9 @@ RUN echo '# Enable mouse support' > /root/.tmux.conf && \
     echo 'set -g status-right "#[fg=colour166]#H #[fg=colour245]%Y-%m-%d %H:%M"' >> /root/.tmux.conf
 
 COPY ./apps/sec-tools/motd.txt /etc/motd
+COPY ./apps/sec-tools/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 WORKDIR /data
 SHELL ["/bin/zsh", "-c"]
-CMD ["/bin/zsh"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD []
