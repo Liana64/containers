@@ -1,0 +1,37 @@
+  __  ___ ___  _____ __   __  _    __
+/' _/| __/ _/_|_   _/__\ /__\| | /' _/
+`._`.| _| \_|__|| || \/ | \/ | |_`._`.
+|___/|___\__/   |_| \__/ \__/|___|___/
+
+
+📱 USERNAME & SOCIAL MEDIA ENUMERATION:
+   sherlock <username>              Search username across social networks
+   argus <username>                 Advanced username reconnaissance
+   holehe <email>                   Check if email is registered on sites
+   socialscan <username/email>      Fast availability checker
+
+🌐 NETWORK & DOMAIN RECONNAISSANCE:
+   amass enum -d <domain>           Comprehensive subdomain enumeration
+   subfinder -d <domain>            Fast subdomain discovery
+   dnsx -l <domains.txt>            DNS toolkit and resolver
+   httpx -l <urls.txt>              HTTP probe with detailed info
+   nmap <target>                    Network port scanner
+   masscan <target>                 Ultra-fast port scanner
+   whois <domain>                   Domain registration lookup
+
+🔎 WEB FUZZING & DISCOVERY:
+   ffuf -u <url> -w <wordlist>      Fast web fuzzer
+
+🛠️ UTILITIES:
+   curl <url>                       Transfer data from/to servers
+   wget <url>                       Download files from the web
+   jq                               JSON processor
+   yq                               YAML/JSON/XML processor
+   dig <domain>                     DNS lookup utility
+   nc / ncat                        TCP/UDP connections
+   socat                            Multipurpose relay
+
+🚀 ALIASES:
+  subenum <domain>                 Full subdomain enumeration pipeline
+  portscan <target> <output>       Version scan open ports
+  fastscan <target>                Masscan all ports at high speed

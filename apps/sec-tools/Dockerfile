@@ -5,17 +5,20 @@ ENV PYTHONUNBUFFERED=1 \
     ZSH_CUSTOM=/root/.oh-my-zsh/custom \
     PATH="/root/.local/bin:/usr/local/go/bin:/root/go/bin:${PATH}"
 
-RUN microdnf install -y epel-release && \
-    microdnf install -y dnf-plugins-core && \
+RUN microdnf install -y dnf && \
     microdnf clean all
 
+
+RUN dnf install -y epel-release && \
+    dnf config-manager --set-enabled crb && \
+    dnf install -y dnf-plugins-core && \
+    dnf clean all
+
 RUN dnf install -y \
-    # Terminal
     zsh \
     vim \
     tmux \
     git \
-    # Network tools
     curl \
     wget \
     whois \
@@ -23,13 +26,11 @@ RUN dnf install -y \
     nmap \
     nmap-ncat \
     socat \
-    # Build tools
     python3 \
     python3-pip \
     gcc \
     gcc-c++ \
     make \
-    # Utilities
     jq \
     unzip \
     less \
@@ -67,7 +68,7 @@ RUN git clone --depth 1 https://github.com/junegunn/fzf.git /root/.fzf && \
 RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq && \
     chmod +x /usr/local/bin/yq
 
-RUN dnf install -y libpcap-devel && \
+RUN dnf install -y libpcap libpcap-devel && \
     git clone https://github.com/robertdavidgraham/masscan /tmp/masscan && \
     cd /tmp/masscan && \
     make && \
@@ -169,7 +170,7 @@ RUN echo '# Enable mouse support' > /root/.tmux.conf && \
     echo 'set -g status-left-length 30' >> /root/.tmux.conf && \
     echo 'set -g status-right "#[fg=colour166]#H #[fg=colour245]%Y-%m-%d %H:%M"' >> /root/.tmux.conf
 
-COPY motd.txt /etc/motd
+COPY ./apps/sec-tools/motd.txt /etc/motd
 WORKDIR /data
 SHELL ["/bin/zsh", "-c"]
 CMD ["/bin/zsh"]
