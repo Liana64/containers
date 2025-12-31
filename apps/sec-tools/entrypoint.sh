@@ -4,7 +4,6 @@ if [ ! -f /data/.motd_shown ]; then
     cat /etc/motd
 fi
 
-
 if [ $# -eq 0 ]; then
     if [ -t 0 ]; then
         exec /bin/zsh
