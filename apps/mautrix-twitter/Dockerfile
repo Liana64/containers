@@ -1,4 +1,4 @@
-FROM docker.io/library/golang:1.24-alpine3.23 AS builder
+FROM docker.io/library/golang:1.25-alpine3.23 AS builder
 
 ARG TARGETPLATFORM
 ARG VERSION
