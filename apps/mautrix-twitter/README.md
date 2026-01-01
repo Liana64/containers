@@ -1,4 +1,4 @@
-# `mautrix-discord`
+# `mautrix-twitter`
 
 ## Environment
 
