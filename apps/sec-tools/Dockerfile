@@ -109,10 +109,7 @@ RUN pip3 install --no-cache-dir \
     h8mail \
     emailfinder
 
-RUN git clone --depth 1 https://github.com/laramies/metagoofil.git /opt/metagoofil && \
-    pip3 install --no-cache-dir -r /opt/metagoofil/requirements.txt && \
-    ln -s /opt/metagoofil/metagoofil.py /usr/local/bin/metagoofil && \
-    chmod +x /opt/metagoofil/metagoofil.py
+RUN pip3 install --no-cache-dir metagoofil
 
 RUN git clone --depth 1 https://github.com/jasonxtn/Argus.git /tmp/argus-install && \
     cd /tmp/argus-install && \
@@ -133,6 +130,7 @@ RUN printf '#!/bin/bash\ncat /etc/motd\n' > /usr/local/bin/help && \
     chmod +x /usr/local/bin/help
 
 USER ${USER}
+
 WORKDIR ${HOME}
 
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME}/.fzf && \
