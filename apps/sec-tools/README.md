@@ -1,3 +1,3 @@
 # sec-tools
 
-Lightweight security tools container
+Lightweight pentest container, probably misconfigured.

@@ -4,34 +4,42 @@
 |___/|___\__/   |_| \__/ \__/|___|___/
 
 
-📱 USERNAME & SOCIAL MEDIA ENUMERATION:
+• OSINT
    sherlock <username>              Search username across social networks
    argus <username>                 Advanced username reconnaissance
    holehe <email>                   Check if email is registered on sites
    socialscan <username/email>      Fast availability checker
+   holehe <email>                   Check if email is registered on sites
+   emailfinder -d <domain>          Find email format for a company
+   h8mail -t <email>                Email breach lookups
 
-🌐 NETWORK & DOMAIN RECONNAISSANCE:
+• DOMAIN RECON
+   whois <domain>                   Domain registration lookup
    amass enum -d <domain>           Comprehensive subdomain enumeration
    subfinder -d <domain>            Fast subdomain discovery
+   dig <domain>                     DNS lookup
    dnsx -l <domains.txt>            DNS toolkit and resolver
-   httpx -l <urls.txt>              HTTP probe with detailed info
    nmap <target>                    Network port scanner
+   httpx -l <urls.txt>              HTTP probe with detailed info
    masscan <target>                 Ultra-fast port scanner
-   whois <domain>                   Domain registration lookup
+   kube-hunter                      Hunt for K8s security weaknesses
 
-🔎 WEB FUZZING & DISCOVERY:
-   ffuf -u <url> -w <wordlist>      Fast web fuzzer
+• DISCOVERY
+   gau <domain>                     Fetch known URLs from AlienVault/Wayback/etc
+   waybackurls <domain>             Fetch URLs from Wayback Machine
+   gospider -s <url>                Fast web spider/crawler
+   ffuf -u <url>/FUZZ -w <list>     Fast web fuzzer
+   exiftool <file>                  Extract metadata from files
+   metagoofil -d <domain> -t pdf    Harvest public document metadata
+   ghunt <email>                    Google account OSINT
 
-🛠️ UTILITIES:
-   curl <url>                       Transfer data from/to servers
-   wget <url>                       Download files from the web
-   jq                               JSON processor
-   yq                               YAML/JSON/XML processor
-   dig <domain>                     DNS lookup utility
-   nc / ncat                        TCP/UDP connections
-   socat                            Multipurpose relay
+• UTIL
+   curl / wget                      HTTP clients
+   jq / yq                          JSON/YAML processors
+   nc / ncat / socat                Network utilities
 
-🚀 ALIASES:
-  subenum <domain>                 Full subdomain enumeration pipeline
-  portscan <target> <output>       Version scan open ports
-  fastscan <target>                Masscan all ports at high speed
+• ALIASES
+   subenum <domain>                 Full subdomain enumeration pipeline
+   portscan <target> <output>       Version scan open ports
+   fastscan <target>                Masscan all ports at high speed
+   urls <domain>                    gau with subdomains
