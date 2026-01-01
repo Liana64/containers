@@ -1,0 +1,38 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/goss-org/goss/master/docs/schema.yaml
+process:
+  mautrix-discord:
+    running: true
+
+file:
+  /usr/bin/mautrix-discord:
+    exists: true
+    mode: "0755"
+    owner: mautrix
+    group: mautrix
+    filetype: file
+
+  /entrypoint.sh:
+    exists: true
+    mode: "0755"
+    owner: mautrix
+    group: mautrix
+    filetype: file
+
+  /data:
+    exists: true
+    mode: "0700"
+    owner: mautrix
+    group: mautrix
+    filetype: directory
+
+user:
+  mautrix:
+    exists: true
+    uid: 1337
+    gid: 1337
+
+group:
+  mautrix:
+    exists: true
+    gid: 1337
