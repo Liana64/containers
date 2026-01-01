@@ -100,11 +100,12 @@ RUN GOPATH=/tmp/go go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@lates
     rm -rf /tmp/go
 
 RUN pip3 install --no-cache-dir \
+    wheel \
+    ruamel.yaml \
     sherlock-project \
     holehe \
     socialscan \
     kube-hunter \
-    ghunt \
     h8mail \
     emailfinder
 

@@ -31,7 +31,6 @@
    ffuf -u <url>/FUZZ -w <list>     Fast web fuzzer
    exiftool <file>                  Extract metadata from files
    metagoofil -d <domain> -t pdf    Harvest public document metadata
-   ghunt <email>                    Google account OSINT
 
 • UTIL
    curl / wget                      HTTP clients
