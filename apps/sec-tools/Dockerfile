@@ -109,8 +109,6 @@ RUN pip3 install --no-cache-dir \
     h8mail \
     emailfinder
 
-RUN pip3 install --no-cache-dir metagoofil
-
 RUN git clone --depth 1 https://github.com/jasonxtn/Argus.git /tmp/argus-install && \
     cd /tmp/argus-install && \
     mkdir -p /opt/argus && \
