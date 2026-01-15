@@ -4,3 +4,4 @@ version=$(curl -sX GET "https://api.github.com/repos/mautrix/signal/releases/lat
 version="${version#*v}"
 version="${version#*release-}"
 printf "%s" "${version}"
+
