@@ -23,6 +23,55 @@ Welcome to my container images. See the [packages page](https://github.com/Liana
 
 This repository was originally forked from onedr0p's [containers](https://github.com/onedr0p/containers).
 
+## Available Images
+
+Each Image will be built with a `rolling` tag, along with tags specific to it's version. Available Images Below
+
+Container | Channel | Image
+--- | --- | ---
+[actions-runner](https://github.com/Liana64/pkgs/container/actions-runner) | stable | ghcr.io/Liana64/actions-runner
+[bazarr](https://github.com/Liana64/pkgs/container/bazarr) | stable | ghcr.io/Liana64/bazarr
+[home-assistant](https://github.com/Liana64/pkgs/container/home-assistant) | stable | ghcr.io/Liana64/home-assistant
+[jbops](https://github.com/Liana64/pkgs/container/jbops) | stable | ghcr.io/Liana64/jbops
+[mataroa](https://github.com/Liana64/pkgs/container/mataroa) | stable | ghcr.io/Liana64/mataroa
+[mautrix-discord](https://github.com/Liana64/pkgs/container/mautrix-discord) | stable | ghcr.io/Liana64/mautrix-discord
+[mautrix-linkedin](https://github.com/Liana64/pkgs/container/mautrix-linkedin) | stable | ghcr.io/Liana64/mautrix-linkedin
+[mautrix-meta](https://github.com/Liana64/pkgs/container/mautrix-meta) | stable | ghcr.io/Liana64/mautrix-meta
+[mautrix-signal](https://github.com/Liana64/pkgs/container/mautrix-signal) | stable | ghcr.io/Liana64/mautrix-signal
+[mautrix-twitter](https://github.com/Liana64/pkgs/container/mautrix-twitter) | stable | ghcr.io/Liana64/mautrix-twitter
+[mysql-init](https://github.com/Liana64/pkgs/container/mysql-init) | stable | ghcr.io/Liana64/mysql-init
+[plex](https://github.com/Liana64/pkgs/container/plex) | stable | ghcr.io/Liana64/plex
+[plex-beta](https://github.com/Liana64/pkgs/container/plex-beta) | beta | ghcr.io/Liana64/plex-beta
+[postgres-init](https://github.com/Liana64/pkgs/container/postgres-init) | stable | ghcr.io/Liana64/postgres-init
+[prowlarr](https://github.com/Liana64/pkgs/container/prowlarr) | master | ghcr.io/Liana64/prowlarr
+[prowlarr-develop](https://github.com/Liana64/pkgs/container/prowlarr-develop) | develop | ghcr.io/Liana64/prowlarr-develop
+[prowlarr-nightly](https://github.com/Liana64/pkgs/container/prowlarr-nightly) | nightly | ghcr.io/Liana64/prowlarr-nightly
+[qbittorrent](https://github.com/Liana64/pkgs/container/qbittorrent) | stable | ghcr.io/Liana64/qbittorrent
+[qbittorrent-beta](https://github.com/Liana64/pkgs/container/qbittorrent-beta) | beta | ghcr.io/Liana64/qbittorrent-beta
+[radarr](https://github.com/Liana64/pkgs/container/radarr) | master | ghcr.io/Liana64/radarr
+[radarr-develop](https://github.com/Liana64/pkgs/container/radarr-develop) | develop | ghcr.io/Liana64/radarr-develop
+[radarr-nightly](https://github.com/Liana64/pkgs/container/radarr-nightly) | nightly | ghcr.io/Liana64/radarr-nightly
+[sabnzbd](https://github.com/Liana64/pkgs/container/sabnzbd) | stable | ghcr.io/Liana64/sabnzbd
+[sec-tools](https://github.com/Liana64/pkgs/container/sec-tools) | stable | ghcr.io/Liana64/sec-tools
+[sonarr](https://github.com/Liana64/pkgs/container/sonarr) | main | ghcr.io/Liana64/sonarr
+[sonarr-develop](https://github.com/Liana64/pkgs/container/sonarr-develop) | develop | ghcr.io/Liana64/sonarr-develop
+[tautulli](https://github.com/Liana64/pkgs/container/tautulli) | master | ghcr.io/Liana64/tautulli
+[unique-turker-2](https://github.com/Liana64/pkgs/container/unique-turker-2) | stable | ghcr.io/Liana64/unique-turker-2
+[volsync](https://github.com/Liana64/pkgs/container/volsync) | stable | ghcr.io/Liana64/volsync
+[writefreely](https://github.com/Liana64/pkgs/container/writefreely) | stable | ghcr.io/Liana64/writefreely
+
+
+## Deprecations
+
+Containers here can be **deprecated** at any point, this could be for any reason described below.
+
+1. The upstream application is **no longer actively developed**
+2. The upstream application has an **official upstream container** that follows closely to the mission statement described here
+3. The upstream application has been **replaced with a better alternative**
+4. The **maintenance burden** of keeping the container here **is too bothersome**
+
+**Note**: Deprecated containers will remained published to this repo for 6 months after which they will be pruned.
+
 ## Mission statement
 
 The goal of this project is to support [semantically versioned](https://semver.org/), [rootless](https://rootlesscontaine.rs/), and [multiple architecture](https://www.docker.com/blog/multi-arch-build-and-images-the-simple-way/) containers for various applications.
@@ -102,46 +151,3 @@ Some applications do not support defining configuration via environment variable
 ## Configuration volume
 
 For applications that need to have persistent configuration data the config volume is hardcoded to `/config` inside the container. This is not able to be changed in most cases.
-
-## Available Images
-
-Each Image will be built with a `rolling` tag, along with tags specific to it's version. Available Images Below
-
-Container | Channel | Image
---- | --- | ---
-[actions-runner](https://github.com/Liana64/pkgs/container/actions-runner) | stable | ghcr.io/Liana64/actions-runner
-[bazarr](https://github.com/Liana64/pkgs/container/bazarr) | stable | ghcr.io/Liana64/bazarr
-[home-assistant](https://github.com/Liana64/pkgs/container/home-assistant) | stable | ghcr.io/Liana64/home-assistant
-[jbops](https://github.com/Liana64/pkgs/container/jbops) | stable | ghcr.io/Liana64/jbops
-[mataroa](https://github.com/Liana64/pkgs/container/mataroa) | stable | ghcr.io/Liana64/mataroa
-[mysql-init](https://github.com/Liana64/pkgs/container/mysql-init) | stable | ghcr.io/Liana64/mysql-init
-[plex](https://github.com/Liana64/pkgs/container/plex) | stable | ghcr.io/Liana64/plex
-[plex-beta](https://github.com/Liana64/pkgs/container/plex-beta) | beta | ghcr.io/Liana64/plex-beta
-[postgres-init](https://github.com/Liana64/pkgs/container/postgres-init) | stable | ghcr.io/Liana64/postgres-init
-[prowlarr](https://github.com/Liana64/pkgs/container/prowlarr) | master | ghcr.io/Liana64/prowlarr
-[prowlarr-develop](https://github.com/Liana64/pkgs/container/prowlarr-develop) | develop | ghcr.io/Liana64/prowlarr-develop
-[prowlarr-nightly](https://github.com/Liana64/pkgs/container/prowlarr-nightly) | nightly | ghcr.io/Liana64/prowlarr-nightly
-[qbittorrent](https://github.com/Liana64/pkgs/container/qbittorrent) | stable | ghcr.io/Liana64/qbittorrent
-[qbittorrent-beta](https://github.com/Liana64/pkgs/container/qbittorrent-beta) | beta | ghcr.io/Liana64/qbittorrent-beta
-[radarr](https://github.com/Liana64/pkgs/container/radarr) | master | ghcr.io/Liana64/radarr
-[radarr-develop](https://github.com/Liana64/pkgs/container/radarr-develop) | develop | ghcr.io/Liana64/radarr-develop
-[radarr-nightly](https://github.com/Liana64/pkgs/container/radarr-nightly) | nightly | ghcr.io/Liana64/radarr-nightly
-[sabnzbd](https://github.com/Liana64/pkgs/container/sabnzbd) | stable | ghcr.io/Liana64/sabnzbd
-[sonarr](https://github.com/Liana64/pkgs/container/sonarr) | main | ghcr.io/Liana64/sonarr
-[sonarr-develop](https://github.com/Liana64/pkgs/container/sonarr-develop) | develop | ghcr.io/Liana64/sonarr-develop
-[tautulli](https://github.com/Liana64/pkgs/container/tautulli) | master | ghcr.io/Liana64/tautulli
-[unique-turker-2](https://github.com/Liana64/pkgs/container/unique-turker-2) | stable | ghcr.io/Liana64/unique-turker-2
-[volsync](https://github.com/Liana64/pkgs/container/volsync) | stable | ghcr.io/Liana64/volsync
-[writefreely](https://github.com/Liana64/pkgs/container/writefreely) | stable | ghcr.io/Liana64/writefreely
-
-
-## Deprecations
-
-Containers here can be **deprecated** at any point, this could be for any reason described below.
-
-1. The upstream application is **no longer actively developed**
-2. The upstream application has an **official upstream container** that follows closely to the mission statement described here
-3. The upstream application has been **replaced with a better alternative**
-4. The **maintenance burden** of keeping the container here **is too bothersome**
-
-**Note**: Deprecated containers will remained published to this repo for 6 months after which they will be pruned.
