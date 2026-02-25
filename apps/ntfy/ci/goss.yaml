@@ -1,0 +1,14 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/goss-org/goss/master/docs/schema.yaml
+process:
+  ntfy:
+    running: true
+port:
+  tcp:8080:
+    listening: true
+http:
+  http://localhost:8080:
+    status: 200
+file:
+  /app/bin/ntfy:
+    exists: true
