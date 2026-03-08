@@ -31,6 +31,7 @@ Container | Channel | Image
 --- | --- | ---
 [actions-runner](https://github.com/Liana64/pkgs/container/actions-runner) | stable | ghcr.io/Liana64/actions-runner
 [bazarr](https://github.com/Liana64/pkgs/container/bazarr) | stable | ghcr.io/Liana64/bazarr
+[claude-code](https://github.com/Liana64/pkgs/container/claude-code) | stable | ghcr.io/Liana64/claude-code
 [home-assistant](https://github.com/Liana64/pkgs/container/home-assistant) | stable | ghcr.io/Liana64/home-assistant
 [jbops](https://github.com/Liana64/pkgs/container/jbops) | stable | ghcr.io/Liana64/jbops
 [mataroa](https://github.com/Liana64/pkgs/container/mataroa) | stable | ghcr.io/Liana64/mataroa
@@ -40,6 +41,7 @@ Container | Channel | Image
 [mautrix-signal](https://github.com/Liana64/pkgs/container/mautrix-signal) | stable | ghcr.io/Liana64/mautrix-signal
 [mautrix-twitter](https://github.com/Liana64/pkgs/container/mautrix-twitter) | stable | ghcr.io/Liana64/mautrix-twitter
 [mysql-init](https://github.com/Liana64/pkgs/container/mysql-init) | stable | ghcr.io/Liana64/mysql-init
+[ntfy](https://github.com/Liana64/pkgs/container/ntfy) | stable | ghcr.io/Liana64/ntfy
 [plex](https://github.com/Liana64/pkgs/container/plex) | stable | ghcr.io/Liana64/plex
 [plex-beta](https://github.com/Liana64/pkgs/container/plex-beta) | beta | ghcr.io/Liana64/plex-beta
 [postgres-init](https://github.com/Liana64/pkgs/container/postgres-init) | stable | ghcr.io/Liana64/postgres-init
