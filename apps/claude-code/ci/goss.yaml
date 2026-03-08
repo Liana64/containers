@@ -1,0 +1,10 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/goss-org/goss/master/docs/schema.yaml
+command:
+  claude --version:
+    exit-status: 0
+file:
+  /usr/bin/git:
+    exists: true
+  /usr/local/bin/claude:
+    exists: true
