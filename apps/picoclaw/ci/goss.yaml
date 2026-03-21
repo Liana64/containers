@@ -1,0 +1,14 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/goss-org/goss/master/docs/schema.yaml
+process:
+  picoclaw:
+    running: true
+port:
+  tcp:18790:
+    listening: true
+http:
+  http://localhost:18790:
+    status: 200
+file:
+  /app/bin/picoclaw:
+    exists: true
