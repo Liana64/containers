@@ -8,7 +8,8 @@ ENV UMASK="0002" \
     TZ="Etc/UTC"
 
 ENV NTFY_LISTEN_HTTP=":8080" \
-    NTFY_CACHE_FILE="/config/cache.db"
+    NTFY_CACHE_FILE="/config/cache.db" \
+    NTFY_AUTH_FILE="/config/auth.db"
 
 USER root
 WORKDIR /app
