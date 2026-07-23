@@ -5,8 +5,7 @@ ARG VERSION
 ARG CHANNEL
 
 ENV UMASK="0002" \
-    TZ="Etc/UTC" \
-    HOME="/home/codex"
+    TZ="Etc/UTC"
 
 USER root
 WORKDIR /app
@@ -40,7 +39,8 @@ RUN \
 
 COPY ./apps/codex/entrypoint.sh /entrypoint.sh
 
-ENV PATH="/nix/var/nix/profiles/default/bin:${PATH}"
+ENV HOME="/home/codex" \
+    PATH="/nix/var/nix/profiles/default/bin:${PATH}"
 
 USER codex
 WORKDIR /workspace
