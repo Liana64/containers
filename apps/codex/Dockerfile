@@ -5,7 +5,8 @@ ARG VERSION
 ARG CHANNEL
 
 ENV UMASK="0002" \
-    TZ="Etc/UTC"
+    TZ="Etc/UTC" \
+    HOME="/home/codex"
 
 USER root
 WORKDIR /app
@@ -30,7 +31,7 @@ RUN \
     && usermod -l codex -d /home/codex -m node \
     && groupmod -n codex node \
     && mkdir -p /workspace /home/codex/.codex /nix /etc/nix \
-    && printf 'experimental-features = nix-command flakes\nbuild-users-group =\n' > /etc/nix/nix.conf \
+    && printf 'experimental-features = nix-command flakes\nbuild-users-group =\nsandbox = false\n' > /etc/nix/nix.conf \
     && chown -R codex:codex /workspace /home/codex/.codex /nix \
     && runuser -u codex -- env HOME=/home/codex \
         sh -c 'curl -L https://nixos.org/nix/install | sh -s -- --no-daemon --no-channel-add --no-modify-profile' \
