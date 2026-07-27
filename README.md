@@ -32,6 +32,8 @@ Container | Channel | Image
 [actions-runner](https://github.com/Liana64/pkgs/container/actions-runner) | stable | ghcr.io/Liana64/actions-runner
 [bazarr](https://github.com/Liana64/pkgs/container/bazarr) | stable | ghcr.io/Liana64/bazarr
 [claude-code](https://github.com/Liana64/pkgs/container/claude-code) | stable | ghcr.io/Liana64/claude-code
+[codex](https://github.com/Liana64/pkgs/container/codex) | stable | ghcr.io/Liana64/codex
+[hermes-agent](https://github.com/Liana64/pkgs/container/hermes-agent) | stable | ghcr.io/Liana64/hermes-agent
 [home-assistant](https://github.com/Liana64/pkgs/container/home-assistant) | stable | ghcr.io/Liana64/home-assistant
 [jbops](https://github.com/Liana64/pkgs/container/jbops) | stable | ghcr.io/Liana64/jbops
 [mataroa](https://github.com/Liana64/pkgs/container/mataroa) | stable | ghcr.io/Liana64/mataroa
