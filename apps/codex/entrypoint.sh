@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+umask "${UMASK}"
+
 if [ $# -eq 0 ]; then
     if [ -t 0 ]; then
         exec codex

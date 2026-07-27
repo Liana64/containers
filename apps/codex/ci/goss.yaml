@@ -5,8 +5,14 @@ command:
     exit-status: 0
   nix --version:
     exit-status: 0
+  yq --version:
+    exit-status: 0
+  eza --version:
+    exit-status: 0
 file:
   /usr/bin/git:
     exists: true
   /usr/local/bin/codex:
+    exists: true
+  /home/codex/.nix-profile/bin/nix:
     exists: true
