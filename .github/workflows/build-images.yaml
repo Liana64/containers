@@ -164,9 +164,15 @@ jobs:
 
       - name: Setup Goss
         if: ${{ matrix.image.tests_enabled }}
-        uses: e1himself/goss-installation-action@v1
-        with:
-          version: latest
+        shell: bash
+        env:
+          GOSS_VERSION: 0.4.10
+        run: |
+          base="https://github.com/goss-org/goss/releases/download/v${GOSS_VERSION}"
+          curl -fsSL "${base}/goss_${GOSS_VERSION}_linux_x86_64.tar.gz" \
+              | sudo tar xzf - -C /usr/local/bin goss
+          sudo curl -fsSL -o /usr/local/bin/dgoss "${base}/dgoss"
+          sudo chmod +x /usr/local/bin/goss /usr/local/bin/dgoss
 
       - name: Prepare Build Outputs
         id: prepare-build-outputs
