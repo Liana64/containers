@@ -10,7 +10,6 @@ ENV UMASK="0002" \
 USER root
 WORKDIR /app
 
-# xz-utils is only needed to unpack the nix tarball; purged after install
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends \
