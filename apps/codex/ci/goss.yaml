@@ -3,16 +3,55 @@
 command:
   codex --version:
     exit-status: 0
-  nix --version:
+  zoxide --version:
     exit-status: 0
-  yq --version:
+  bat --version:
+    exit-status: 0
+  fd --version:
     exit-status: 0
   eza --version:
     exit-status: 0
+  delta --version:
+    exit-status: 0
+  dust --version:
+    exit-status: 0
+  duf --version:
+    exit-status: 0
+  btop --version:
+    exit-status: 0
+  fastfetch --version:
+    exit-status: 0
+  rg --version:
+    exit-status: 0
+  yq --version:
+    exit-status: 0
+  cargo --version:
+    exit-status: 0
+  rustc --version:
+    exit-status: 0
+  cargo clippy --version:
+    exit-status: 0
+  rustfmt --version:
+    exit-status: 0
+  rust-analyzer --version:
+    exit-status: 0
+  ssh -G github.com:
+    exit-status: 0
+    stdout:
+      - "identityfile ${HOME}/.ssh/id_ed25519"
+      - "userknownhostsfile /home/codex/.ssh/known_hosts /etc/ssh/ssh_known_hosts"
+      - "stricthostkeychecking accept-new"
 file:
   /usr/bin/git:
     exists: true
   /usr/local/bin/codex:
     exists: true
-  /home/codex/.nix-profile/bin/nix:
+  /etc/ssh/ssh_known_hosts:
     exists: true
+    contents:
+      - /^github\.com ssh-ed25519 /
+  /home/codex/.ssh:
+    exists: true
+    mode: "0700"
+    owner: codex
+    group: codex

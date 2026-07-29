@@ -45,6 +45,27 @@
       "matchUpdateTypes": ["patch"],
       "semanticCommitScope": "{{parentDir}}",
       "semanticCommitType": "fix"
+    },
+    {
+      "addLabels": ["renovate/github-release"],
+      "additionalBranchPrefix": "{{parentDir}}-",
+      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )",
+      "commitMessageTopic": "{{depName}}",
+      "labels": ["app/{{parentDir}}"],
+      "matchDatasources": ["github-releases"],
+      "matchFileNames": ["apps/**/Dockerfile"],
+      "semanticCommitScope": "{{parentDir}}"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Tool versions pinned as ARGs in app Dockerfiles",
+      "managerFilePatterns": ["/apps/.+/Dockerfile$/"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\s+ARG \\w+_VERSION=(?<currentValue>\\S+)"
+      ],
+      "extractVersionTemplate": "^v?(?<version>.+)$"
     }
   ]
 }

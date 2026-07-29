@@ -1,0 +1,7 @@
+Host *
+    IdentityFile ${HOME}/.ssh/id_ed25519
+    IdentityFile ${HOME}/.ssh/id_ecdsa
+    IdentityFile ${HOME}/.ssh/id_rsa
+    UserKnownHostsFile ${HOME}/.ssh/known_hosts /etc/ssh/ssh_known_hosts
+    StrictHostKeyChecking accept-new
+    ServerAliveInterval 60
