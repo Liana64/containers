@@ -1,4 +1,4 @@
-FROM docker.io/library/python:3.13-slim AS build
+FROM docker.io/library/python:3.14-slim AS build
 
 ARG VERSION
 
@@ -15,7 +15,7 @@ RUN \
     && /opt/venv/bin/pip install "hermes-agent[all,messaging,anthropic]==${VERSION}" \
     && /opt/venv/bin/pip uninstall -y pip wheel
 
-FROM docker.io/library/python:3.13-slim
+FROM docker.io/library/python:3.14-slim
 
 ARG TARGETPLATFORM
 ARG VERSION
