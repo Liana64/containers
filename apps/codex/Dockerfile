@@ -13,7 +13,7 @@ ARG FD_VERSION=10.4.2
 # renovate: datasource=github-releases depName=dandavison/delta
 ARG DELTA_VERSION=0.19.2
 # renovate: datasource=github-releases depName=bootandy/dust
-ARG DUST_VERSION=1.2.4
+ARG DUST_VERSION=1.2.5
 # renovate: datasource=github-releases depName=muesli/duf
 ARG DUF_VERSION=0.9.1
 # renovate: datasource=github-releases depName=aristocratos/btop
