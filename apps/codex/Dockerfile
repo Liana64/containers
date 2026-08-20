@@ -23,7 +23,7 @@ ARG FASTFETCH_VERSION=2.66.0
 # renovate: datasource=github-releases depName=eza-community/eza
 ARG EZA_VERSION=0.23.5
 # renovate: datasource=github-releases depName=mikefarah/yq
-ARG YQ_VERSION=4.53.3
+ARG YQ_VERSION=4.53.6
 
 ARG CARGO_HOME=/usr/local/cargo
 
