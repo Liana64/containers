@@ -19,7 +19,7 @@ ARG DUF_VERSION=0.9.1
 # renovate: datasource=github-releases depName=aristocratos/btop
 ARG BTOP_VERSION=1.4.7
 # renovate: datasource=github-releases depName=fastfetch-cli/fastfetch
-ARG FASTFETCH_VERSION=2.66.0
+ARG FASTFETCH_VERSION=2.68.1
 # renovate: datasource=github-releases depName=eza-community/eza
 ARG EZA_VERSION=0.23.5
 # renovate: datasource=github-releases depName=mikefarah/yq
