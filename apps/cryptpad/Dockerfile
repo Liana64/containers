@@ -10,7 +10,6 @@ USER root
 RUN apk add --no-cache catatonit
 
 USER cryptpad
-WORKDIR /cryptpad
 
 RUN ./install-onlyoffice.sh --accept-license
 
