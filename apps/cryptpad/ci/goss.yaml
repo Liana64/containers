@@ -1,0 +1,16 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/goss-org/goss/master/docs/schema.yaml
+process:
+  node:
+    running: true
+port:
+  tcp:3000:
+    listening: true
+http:
+  http://localhost:3000:
+    status: 200
+file:
+  /cryptpad/www/common/onlyoffice/dist/v9/.version:
+    exists: true
+  /cryptpad/www/common/onlyoffice/dist/x2t/.version:
+    exists: true
