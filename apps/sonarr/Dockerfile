@@ -1,5 +1,5 @@
 ARG VERSION
-FROM docker.io/library/alpine:3.20
+FROM docker.io/library/alpine:3.24
 
 ARG TARGETPLATFORM
 ARG VERSION
@@ -9,7 +9,7 @@ ENV UMASK="0002" \
     TZ="Etc/UTC"
 
 ENV \
-    COMPlus_EnableDiagnostics="0" \
+    DOTNET_EnableDiagnostics="0" \
     SONARR__UPDATE__BRANCH="${CHANNEL}"
 
 USER root
