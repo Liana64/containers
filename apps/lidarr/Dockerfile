@@ -21,6 +21,7 @@ RUN \
     bash \
     ca-certificates \
     catatonit \
+    chromaprint \
     coreutils \
     curl \
     icu-libs \
@@ -41,7 +42,7 @@ RUN \
     | tar xzf - -C /app/bin --strip-components=1 \
     && printf "UpdateMethod=docker\nBranch=%s\nPackageVersion=%s\nPackageAuthor=[Liana64](https://github.com/Liana64)\n" "${LIDARR__UPDATE__BRANCH}" "${VERSION}" > /app/package_info \
     && chown -R root:root /app && chmod -R 755 /app \
-    && rm -rf /tmp/* /app/bin/Lidarr.Update
+    && rm -rf /tmp/* /app/bin/Lidarr.Update /app/bin/fpcalc
 
 COPY ./apps/lidarr/entrypoint.sh /entrypoint.sh
 
