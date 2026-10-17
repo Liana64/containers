@@ -37,6 +37,9 @@ Container | Channel | Image
 [hermes-agent](https://github.com/Liana64/pkgs/container/hermes-agent) | stable | ghcr.io/Liana64/hermes-agent
 [home-assistant](https://github.com/Liana64/pkgs/container/home-assistant) | stable | ghcr.io/Liana64/home-assistant
 [jbops](https://github.com/Liana64/pkgs/container/jbops) | stable | ghcr.io/Liana64/jbops
+[lidarr](https://github.com/Liana64/pkgs/container/lidarr) | master | ghcr.io/Liana64/lidarr
+[lidarr-develop](https://github.com/Liana64/pkgs/container/lidarr-develop) | develop | ghcr.io/Liana64/lidarr-develop
+[lidarr-nightly](https://github.com/Liana64/pkgs/container/lidarr-nightly) | nightly | ghcr.io/Liana64/lidarr-nightly
 [mataroa](https://github.com/Liana64/pkgs/container/mataroa) | stable | ghcr.io/Liana64/mataroa
 [mautrix-discord](https://github.com/Liana64/pkgs/container/mautrix-discord) | stable | ghcr.io/Liana64/mautrix-discord
 [mautrix-linkedin](https://github.com/Liana64/pkgs/container/mautrix-linkedin) | stable | ghcr.io/Liana64/mautrix-linkedin
