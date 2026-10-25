@@ -17,7 +17,7 @@ ARG DUST_VERSION=1.2.4
 # renovate: datasource=github-releases depName=muesli/duf
 ARG DUF_VERSION=0.9.1
 # renovate: datasource=github-releases depName=aristocratos/btop
-ARG BTOP_VERSION=1.4.7
+ARG BTOP_VERSION=1.4.8
 # renovate: datasource=github-releases depName=fastfetch-cli/fastfetch
 ARG FASTFETCH_VERSION=2.66.0
 # renovate: datasource=github-releases depName=eza-community/eza
