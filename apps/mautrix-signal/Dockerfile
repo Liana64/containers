@@ -43,7 +43,7 @@ COPY --from=rust-builder /build/pkg/libsignalgo/libsignal/target/*/libsignal_ffi
 
 RUN ./build-go.sh
 
-FROM docker.io/library/alpine:3.23
+FROM docker.io/library/alpine:3.24
 
 ARG TARGETPLATFORM
 ARG VERSION
