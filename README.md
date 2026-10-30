@@ -66,6 +66,7 @@ Container | Channel | Image
 [sonarr](https://github.com/Liana64/pkgs/container/sonarr) | main | ghcr.io/Liana64/sonarr
 [sonarr-develop](https://github.com/Liana64/pkgs/container/sonarr-develop) | develop | ghcr.io/Liana64/sonarr-develop
 [tautulli](https://github.com/Liana64/pkgs/container/tautulli) | master | ghcr.io/Liana64/tautulli
+[traefik-crowdsec-bouncer](https://github.com/Liana64/pkgs/container/traefik-crowdsec-bouncer) | stable | ghcr.io/Liana64/traefik-crowdsec-bouncer
 [unique-turker-2](https://github.com/Liana64/pkgs/container/unique-turker-2) | stable | ghcr.io/Liana64/unique-turker-2
 [volsync](https://github.com/Liana64/pkgs/container/volsync) | stable | ghcr.io/Liana64/volsync
 [writefreely](https://github.com/Liana64/pkgs/container/writefreely) | stable | ghcr.io/Liana64/writefreely
