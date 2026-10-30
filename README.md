@@ -33,6 +33,7 @@ Container | Channel | Image
 [bazarr](https://github.com/Liana64/pkgs/container/bazarr) | stable | ghcr.io/Liana64/bazarr
 [claude-code](https://github.com/Liana64/pkgs/container/claude-code) | stable | ghcr.io/Liana64/claude-code
 [codex](https://github.com/Liana64/pkgs/container/codex) | stable | ghcr.io/Liana64/codex
+[crowdsec](https://github.com/Liana64/pkgs/container/crowdsec) | stable | ghcr.io/Liana64/crowdsec
 [cryptpad](https://github.com/Liana64/pkgs/container/cryptpad) | stable | ghcr.io/Liana64/cryptpad
 [hermes-agent](https://github.com/Liana64/pkgs/container/hermes-agent) | stable | ghcr.io/Liana64/hermes-agent
 [home-assistant](https://github.com/Liana64/pkgs/container/home-assistant) | stable | ghcr.io/Liana64/home-assistant
