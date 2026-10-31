@@ -14,7 +14,9 @@ case "${1:-}" in
         : "${AGENT_PASSWORD:?}" "${LAPI_URL:?}"
         yq -n '.url = strenv(LAPI_URL) | .login = "agent" | .password = strenv(AGENT_PASSWORD)' \
             > /tmp/local_api_credentials.yaml
-        exec crowdsec -no-api
+        yq eval-all 'select(fi == 0) * select(fi == 1) | del(.db_config)' \
+            /etc/crowdsec/config.yaml /etc/crowdsec/config.yaml.local > /tmp/config.yaml
+        exec crowdsec -c /tmp/config.yaml -no-api
         ;;
     *)
         exec "${@:?usage: lapi | agent | <command>}"
