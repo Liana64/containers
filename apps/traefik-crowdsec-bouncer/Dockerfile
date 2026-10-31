@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.20 AS source
+FROM docker.io/library/alpine:3.24 AS source
 
 ARG TARGETPLATFORM
 ARG VERSION
