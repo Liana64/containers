@@ -8,6 +8,7 @@ case "${1:-}" in
             > /tmp/online_api_credentials.yaml
         cscli machines add lapi --auto --force --url http://127.0.0.1:8080 --file /tmp/local_api_credentials.yaml
         cscli machines add agent --password "${AGENT_PASSWORD}" --force --file /dev/null
+        cscli bouncers prune --duration 24h --force >/dev/null
         cscli bouncers delete traefik >/dev/null 2>&1 || true
         cscli bouncers add traefik --key "${BOUNCER_KEY}" >/dev/null
         exec crowdsec -no-cs
