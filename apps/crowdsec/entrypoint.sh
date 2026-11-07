@@ -3,7 +3,9 @@ set -euo pipefail
 
 case "${1:-}" in
     lapi)
-        : "${AGENT_PASSWORD:?}" "${BOUNCER_KEY:?}"
+        : "${AGENT_PASSWORD:?}" "${BOUNCER_KEY:?}" "${CAPI_LOGIN:?}" "${CAPI_PASSWORD:?}"
+        yq -n '.url = "https://api.crowdsec.net/" | .login = strenv(CAPI_LOGIN) | .password = strenv(CAPI_PASSWORD)' \
+            > /tmp/online_api_credentials.yaml
         cscli machines add lapi --auto --force --url http://127.0.0.1:8080 --file /tmp/local_api_credentials.yaml
         cscli machines add agent --password "${AGENT_PASSWORD}" --force --file /dev/null
         cscli bouncers delete traefik >/dev/null 2>&1 || true

@@ -1,6 +1,9 @@
 api:
   client:
     credentials_path: /tmp/local_api_credentials.yaml
+  server:
+    online_client:
+      credentials_path: /tmp/online_api_credentials.yaml
 db_config:
   db_path: /var/lib/crowdsec/db/crowdsec.db
   use_wal: true
