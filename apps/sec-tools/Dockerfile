@@ -1,4 +1,4 @@
-FROM rockylinux:9-minimal
+FROM rockylinux:10-minimal
 
 ARG USER=ln
 ARG UID=1000
