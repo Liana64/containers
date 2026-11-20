@@ -25,13 +25,17 @@ This repository was originally forked from onedr0p's [containers](https://github
 
 ## Available Images
 
-Each Image will be built with a `rolling` tag, along with tags specific to it's version. Available Images Below
+Each Image is built with a `rolling` tag, along with tags specific to its version.
 
-Container | Channel | Image
---- | --- | ---
+Container | Channel | Image | Landlock
+--- | --- | --- | ---
 {% for image in app_images | sort(attribute="name") -%}
-[{{ image.name }}]({{ image.html_url }}) | {{ image.channel }} | ghcr.io/{{ image.owner }}/{{ image.name }}
+[{{ image.name }}]({{ image.html_url }}) | {{ image.channel }} | ghcr.io/{{ image.owner }}/{{ image.name }} | {{ "✅" if image.landlocked else "" }}
 {% endfor %}
+
+## Landlock
+
+Some images execute in a [landrun](https://github.com/Zouuup/landrun) (landlock) wrapper, these containers will gracefully fallback on kernels without Landlock LSM support.
 
 ## Deprecations
 
@@ -123,4 +127,3 @@ Some applications do not support defining configuration via environment variable
 ## Configuration volume
 
 For applications that need to have persistent configuration data the config volume is hardcoded to `/config` inside the container. This is not able to be changed in most cases.
-

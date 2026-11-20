@@ -34,6 +34,9 @@ def process_metadata(apps_dir):
         if not meta:
             continue # Skip if metadata couldn't be loaded
 
+        with open(os.path.join(subdir, "Dockerfile"), "r") as f:
+            landlocked = 'ENTRYPOINT ["/landrun"' in f.read()
+
         # Iterate through the channels and build image metadata
         for channel in meta.get("channels", []):
             name = meta["app"] if channel.get("stable", False) else f"{meta['app']}-{channel['name']}"
@@ -41,7 +44,8 @@ def process_metadata(apps_dir):
                 "name": name,
                 "channel": channel["name"],
                 "html_url": f"https://github.com/{repo_owner}/pkgs/container/{name}",
-                "owner": repo_owner
+                "owner": repo_owner,
+                "landlocked": landlocked
             }
             app_images.append(image)
             logging.info(f"Added image {name} from channel {channel['name']}")

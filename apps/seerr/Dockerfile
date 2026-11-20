@@ -1,0 +1,9 @@
+ARG VERSION
+FROM ghcr.io/seerr-team/seerr:v${VERSION}
+
+COPY --from=ghcr.io/liana64/landrun:0.1.17 /landrun /landrun
+
+ENTRYPOINT ["/landrun", "--best-effort", "--log-level=info", "--env=*", "--rox=/usr,/lib,/bin", "--ro=/app,/etc,/proc,/sys/fs/cgroup", "--rw=/app/config,/tmp,/app/.next/cache", "--bind-tcp=5055", "--connect-tcp=443,5055,7878,8096,8989,53", "--"]
+CMD ["npm", "start"]
+
+LABEL org.opencontainers.image.source="https://github.com/seerr-team/seerr"

@@ -1,0 +1,13 @@
+--- a/cmd/landrun/main.go
++++ b/cmd/landrun/main.go
+@@ -197,6 +197,10 @@
+ 	result := []string{}
+ 
+ 	for _, env := range envFlags {
++		if env == "*" {
++			result = append(result, os.Environ()...)
++			continue
++		}
+ 		// If the flag is just a key (no = sign), get the value from the current environment
+ 		if !strings.Contains(env, "=") {
+ 			if val, exists := os.LookupEnv(env); exists {
