@@ -12,8 +12,9 @@ COPY ./apps/landrun/env-all.patch /tmp/env-all.patch
 
 #hadolint ignore=DL3018
 RUN apk add --no-cache patch \
-    && wget -qO- "https://github.com/Zouuup/landrun/archive/refs/tags/v${VERSION}.tar.gz" \
-        | tar xzf - --strip-components=1 \
+    && go mod download "github.com/zouuup/landrun@v${VERSION}" \
+    && cp -r "$(go env GOMODCACHE)/github.com/zouuup/landrun@v${VERSION}/." . \
+    && chmod -R u+w . \
     && patch -p1 < /tmp/env-all.patch \
     && go build -trimpath -ldflags='-s -w' -o /landrun ./cmd/landrun
 
