@@ -25,53 +25,63 @@ This repository was originally forked from onedr0p's [containers](https://github
 
 ## Available Images
 
-Each Image will be built with a `rolling` tag, along with tags specific to it's version. Available Images Below
+Each Image is built with a `rolling` tag, along with tags specific to its version.
 
-Container | Channel | Image
---- | --- | ---
-[actions-runner](https://github.com/Liana64/pkgs/container/actions-runner) | stable | ghcr.io/Liana64/actions-runner
-[bazarr](https://github.com/Liana64/pkgs/container/bazarr) | stable | ghcr.io/Liana64/bazarr
-[claude-code](https://github.com/Liana64/pkgs/container/claude-code) | stable | ghcr.io/Liana64/claude-code
-[codex](https://github.com/Liana64/pkgs/container/codex) | stable | ghcr.io/Liana64/codex
-[crowdsec](https://github.com/Liana64/pkgs/container/crowdsec) | stable | ghcr.io/Liana64/crowdsec
-[cryptpad](https://github.com/Liana64/pkgs/container/cryptpad) | stable | ghcr.io/Liana64/cryptpad
-[hermes-agent](https://github.com/Liana64/pkgs/container/hermes-agent) | stable | ghcr.io/Liana64/hermes-agent
-[home-assistant](https://github.com/Liana64/pkgs/container/home-assistant) | stable | ghcr.io/Liana64/home-assistant
-[jbops](https://github.com/Liana64/pkgs/container/jbops) | stable | ghcr.io/Liana64/jbops
-[landrun](https://github.com/Liana64/pkgs/container/landrun) | stable | ghcr.io/Liana64/landrun
-[lidarr](https://github.com/Liana64/pkgs/container/lidarr) | master | ghcr.io/Liana64/lidarr
-[lidarr-develop](https://github.com/Liana64/pkgs/container/lidarr-develop) | develop | ghcr.io/Liana64/lidarr-develop
-[lidarr-nightly](https://github.com/Liana64/pkgs/container/lidarr-nightly) | nightly | ghcr.io/Liana64/lidarr-nightly
-[mataroa](https://github.com/Liana64/pkgs/container/mataroa) | stable | ghcr.io/Liana64/mataroa
-[mautrix-discord](https://github.com/Liana64/pkgs/container/mautrix-discord) | stable | ghcr.io/Liana64/mautrix-discord
-[mautrix-linkedin](https://github.com/Liana64/pkgs/container/mautrix-linkedin) | stable | ghcr.io/Liana64/mautrix-linkedin
-[mautrix-meta](https://github.com/Liana64/pkgs/container/mautrix-meta) | stable | ghcr.io/Liana64/mautrix-meta
-[mautrix-signal](https://github.com/Liana64/pkgs/container/mautrix-signal) | stable | ghcr.io/Liana64/mautrix-signal
-[mautrix-twitter](https://github.com/Liana64/pkgs/container/mautrix-twitter) | stable | ghcr.io/Liana64/mautrix-twitter
-[mysql-init](https://github.com/Liana64/pkgs/container/mysql-init) | stable | ghcr.io/Liana64/mysql-init
-[ntfy](https://github.com/Liana64/pkgs/container/ntfy) | stable | ghcr.io/Liana64/ntfy
-[picoclaw](https://github.com/Liana64/pkgs/container/picoclaw) | stable | ghcr.io/Liana64/picoclaw
-[plex](https://github.com/Liana64/pkgs/container/plex) | stable | ghcr.io/Liana64/plex
-[plex-beta](https://github.com/Liana64/pkgs/container/plex-beta) | beta | ghcr.io/Liana64/plex-beta
-[postgres-init](https://github.com/Liana64/pkgs/container/postgres-init) | stable | ghcr.io/Liana64/postgres-init
-[prowlarr](https://github.com/Liana64/pkgs/container/prowlarr) | master | ghcr.io/Liana64/prowlarr
-[prowlarr-develop](https://github.com/Liana64/pkgs/container/prowlarr-develop) | develop | ghcr.io/Liana64/prowlarr-develop
-[prowlarr-nightly](https://github.com/Liana64/pkgs/container/prowlarr-nightly) | nightly | ghcr.io/Liana64/prowlarr-nightly
-[qbittorrent](https://github.com/Liana64/pkgs/container/qbittorrent) | stable | ghcr.io/Liana64/qbittorrent
-[qbittorrent-beta](https://github.com/Liana64/pkgs/container/qbittorrent-beta) | beta | ghcr.io/Liana64/qbittorrent-beta
-[radarr](https://github.com/Liana64/pkgs/container/radarr) | master | ghcr.io/Liana64/radarr
-[radarr-develop](https://github.com/Liana64/pkgs/container/radarr-develop) | develop | ghcr.io/Liana64/radarr-develop
-[radarr-nightly](https://github.com/Liana64/pkgs/container/radarr-nightly) | nightly | ghcr.io/Liana64/radarr-nightly
-[sabnzbd](https://github.com/Liana64/pkgs/container/sabnzbd) | stable | ghcr.io/Liana64/sabnzbd
-[sec-tools](https://github.com/Liana64/pkgs/container/sec-tools) | stable | ghcr.io/Liana64/sec-tools
-[sonarr](https://github.com/Liana64/pkgs/container/sonarr) | main | ghcr.io/Liana64/sonarr
-[sonarr-develop](https://github.com/Liana64/pkgs/container/sonarr-develop) | develop | ghcr.io/Liana64/sonarr-develop
-[tautulli](https://github.com/Liana64/pkgs/container/tautulli) | master | ghcr.io/Liana64/tautulli
-[traefik-crowdsec-bouncer](https://github.com/Liana64/pkgs/container/traefik-crowdsec-bouncer) | stable | ghcr.io/Liana64/traefik-crowdsec-bouncer
-[unique-turker-2](https://github.com/Liana64/pkgs/container/unique-turker-2) | stable | ghcr.io/Liana64/unique-turker-2
-[volsync](https://github.com/Liana64/pkgs/container/volsync) | stable | ghcr.io/Liana64/volsync
-[writefreely](https://github.com/Liana64/pkgs/container/writefreely) | stable | ghcr.io/Liana64/writefreely
+Container | Channel | Image | Landlock
+--- | --- | --- | ---
+[actions-runner](https://github.com/Liana64/pkgs/container/actions-runner) | stable | ghcr.io/Liana64/actions-runner | 
+[anubis](https://github.com/Liana64/pkgs/container/anubis) | stable | ghcr.io/Liana64/anubis | ✅
+[bazarr](https://github.com/Liana64/pkgs/container/bazarr) | stable | ghcr.io/Liana64/bazarr | 
+[claude-code](https://github.com/Liana64/pkgs/container/claude-code) | stable | ghcr.io/Liana64/claude-code | 
+[codex](https://github.com/Liana64/pkgs/container/codex) | stable | ghcr.io/Liana64/codex | 
+[continuwuity](https://github.com/Liana64/pkgs/container/continuwuity) | stable | ghcr.io/Liana64/continuwuity | ✅
+[crowdsec](https://github.com/Liana64/pkgs/container/crowdsec) | stable | ghcr.io/Liana64/crowdsec | 
+[cryptpad](https://github.com/Liana64/pkgs/container/cryptpad) | stable | ghcr.io/Liana64/cryptpad | 
+[goflow2](https://github.com/Liana64/pkgs/container/goflow2) | stable | ghcr.io/Liana64/goflow2 | ✅
+[home-assistant](https://github.com/Liana64/pkgs/container/home-assistant) | stable | ghcr.io/Liana64/home-assistant | 
+[http-https-echo](https://github.com/Liana64/pkgs/container/http-https-echo) | stable | ghcr.io/Liana64/http-https-echo | ✅
+[immich-public-proxy](https://github.com/Liana64/pkgs/container/immich-public-proxy) | stable | ghcr.io/Liana64/immich-public-proxy | ✅
+[jbops](https://github.com/Liana64/pkgs/container/jbops) | stable | ghcr.io/Liana64/jbops | 
+[landrun](https://github.com/Liana64/pkgs/container/landrun) | stable | ghcr.io/Liana64/landrun | 
+[lidarr](https://github.com/Liana64/pkgs/container/lidarr) | master | ghcr.io/Liana64/lidarr | 
+[lidarr-develop](https://github.com/Liana64/pkgs/container/lidarr-develop) | develop | ghcr.io/Liana64/lidarr-develop | 
+[lidarr-nightly](https://github.com/Liana64/pkgs/container/lidarr-nightly) | nightly | ghcr.io/Liana64/lidarr-nightly | 
+[mataroa](https://github.com/Liana64/pkgs/container/mataroa) | stable | ghcr.io/Liana64/mataroa | 
+[mautrix-discord](https://github.com/Liana64/pkgs/container/mautrix-discord) | stable | ghcr.io/Liana64/mautrix-discord | 
+[mautrix-linkedin](https://github.com/Liana64/pkgs/container/mautrix-linkedin) | stable | ghcr.io/Liana64/mautrix-linkedin | 
+[mautrix-meta](https://github.com/Liana64/pkgs/container/mautrix-meta) | stable | ghcr.io/Liana64/mautrix-meta | 
+[mautrix-signal](https://github.com/Liana64/pkgs/container/mautrix-signal) | stable | ghcr.io/Liana64/mautrix-signal | 
+[mautrix-twitter](https://github.com/Liana64/pkgs/container/mautrix-twitter) | stable | ghcr.io/Liana64/mautrix-twitter | 
+[mysql-init](https://github.com/Liana64/pkgs/container/mysql-init) | stable | ghcr.io/Liana64/mysql-init | 
+[ntfy](https://github.com/Liana64/pkgs/container/ntfy) | stable | ghcr.io/Liana64/ntfy | 
+[opengist](https://github.com/Liana64/pkgs/container/opengist) | stable | ghcr.io/Liana64/opengist | ✅
+[picoclaw](https://github.com/Liana64/pkgs/container/picoclaw) | stable | ghcr.io/Liana64/picoclaw | 
+[plex](https://github.com/Liana64/pkgs/container/plex) | stable | ghcr.io/Liana64/plex | 
+[plex-beta](https://github.com/Liana64/pkgs/container/plex-beta) | beta | ghcr.io/Liana64/plex-beta | 
+[postgres-init](https://github.com/Liana64/pkgs/container/postgres-init) | stable | ghcr.io/Liana64/postgres-init | 
+[prowlarr](https://github.com/Liana64/pkgs/container/prowlarr) | master | ghcr.io/Liana64/prowlarr | 
+[prowlarr-develop](https://github.com/Liana64/pkgs/container/prowlarr-develop) | develop | ghcr.io/Liana64/prowlarr-develop | 
+[prowlarr-nightly](https://github.com/Liana64/pkgs/container/prowlarr-nightly) | nightly | ghcr.io/Liana64/prowlarr-nightly | 
+[qbittorrent](https://github.com/Liana64/pkgs/container/qbittorrent) | stable | ghcr.io/Liana64/qbittorrent | 
+[qbittorrent-beta](https://github.com/Liana64/pkgs/container/qbittorrent-beta) | beta | ghcr.io/Liana64/qbittorrent-beta | 
+[radarr](https://github.com/Liana64/pkgs/container/radarr) | master | ghcr.io/Liana64/radarr | 
+[radarr-develop](https://github.com/Liana64/pkgs/container/radarr-develop) | develop | ghcr.io/Liana64/radarr-develop | 
+[radarr-nightly](https://github.com/Liana64/pkgs/container/radarr-nightly) | nightly | ghcr.io/Liana64/radarr-nightly | 
+[sabnzbd](https://github.com/Liana64/pkgs/container/sabnzbd) | stable | ghcr.io/Liana64/sabnzbd | 
+[sec-tools](https://github.com/Liana64/pkgs/container/sec-tools) | stable | ghcr.io/Liana64/sec-tools | 
+[seerr](https://github.com/Liana64/pkgs/container/seerr) | stable | ghcr.io/Liana64/seerr | ✅
+[sonarr](https://github.com/Liana64/pkgs/container/sonarr) | main | ghcr.io/Liana64/sonarr | 
+[sonarr-develop](https://github.com/Liana64/pkgs/container/sonarr-develop) | develop | ghcr.io/Liana64/sonarr-develop | 
+[tautulli](https://github.com/Liana64/pkgs/container/tautulli) | master | ghcr.io/Liana64/tautulli | 
+[traefik-crowdsec-bouncer](https://github.com/Liana64/pkgs/container/traefik-crowdsec-bouncer) | stable | ghcr.io/Liana64/traefik-crowdsec-bouncer | 
+[unique-turker-2](https://github.com/Liana64/pkgs/container/unique-turker-2) | stable | ghcr.io/Liana64/unique-turker-2 | 
+[volsync](https://github.com/Liana64/pkgs/container/volsync) | stable | ghcr.io/Liana64/volsync | 
+[writefreely](https://github.com/Liana64/pkgs/container/writefreely) | stable | ghcr.io/Liana64/writefreely | 
 
+
+## Landlock
+
+Some images execute in a [landrun](https://github.com/Zouuup/landrun) (landlock) wrapper, these containers will gracefully fallback on kernels without Landlock LSM support.
 
 ## Deprecations
 
