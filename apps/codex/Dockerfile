@@ -7,7 +7,7 @@ ARG CHANNEL
 # renovate: datasource=github-releases depName=ajeetdsouza/zoxide
 ARG ZOXIDE_VERSION=0.10.0
 # renovate: datasource=github-releases depName=sharkdp/bat
-ARG BAT_VERSION=0.26.1
+ARG BAT_VERSION=0.27.0
 # renovate: datasource=github-releases depName=sharkdp/fd
 ARG FD_VERSION=10.4.2
 # renovate: datasource=github-releases depName=dandavison/delta
